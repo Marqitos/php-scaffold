@@ -1,0 +1,21 @@
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+</IfModule>
+
+Header add Cache-Control "public, must-revalidate"
+FileETag All
+
+# Header add Content-Security-Policy "default-src 'none'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; img-src 'self'; connect-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src-elem 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
+Header add Referrer-Policy "strict-origin-when-cross-origin"
+Header add X-Content-Type-Options "nosniff"
+Header add X-Frame-Options "DENY"
+Header add X-XSS-Protection "1"
+
+Header always unset X-Powered-By
+Header always unset Server

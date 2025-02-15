@@ -1,0 +1,19 @@
+# Node dependencies
+# Node version v22.14.0 (LTS)
+node_modules
+package-lock.json
+
+
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Enviroment secrets
+.env
