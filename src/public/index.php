@@ -10,7 +10,7 @@ use Kansas\Application;
 use Kansas\Environment;
 
 if (file_exists(__DIR__ . '/../maintenance.php') &&
-    !isset($_GET('dev'))) {
+    !isset($_GET['dev'])) {
     require_once __DIR__ . '/../maintenance.php';
     exit;
 }
