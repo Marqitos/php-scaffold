@@ -26,10 +26,12 @@ Todos los datos sensibles se guardan en `src/.env`, y se pueden cargar con la li
 
 La estructura está diseñada para trabajar con las librerías:
 
-* Kansas
-* System
-* Psr (PHP Standard Recommendation)
-* DovEnt
+* [Marqitos/**Kansas**](https://github.com/Marqitos/php-kansas) 🔒
+* [Marqitos/**System**](https://github.com/Marqitos/php-system)
+* [Marqitos/**Psr**](https://github.com/Marqitos/php-psr) (PHP Standard Recommendation)
+* [vlucas/**phpdotenv**](https://github.com/vlucas/phpdotenv)
+  * [phpoption/**phpoption**](https://github.com/schmittjoh/php-option) (Requerida por `phpdotenv`)
+  * [graham-campbell/**result-type**](https://github.com/GrahamCampbell/Result-Type) (Requerida por `phpdotenv`)
 
 Y sus dependencias según los plugins habilitados
 
